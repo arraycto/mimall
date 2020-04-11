@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import storage from './storage'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
+  },
+  data(){
+    return{
+      res:{}
+    }
+  },
+  mounted() {
+ /*
+ 本地MOCK
+ this.axios.get("/mock/user/login.json").then((res) => {
+        this.res = res;
+      }
+    );*/
+    /**
+     *  storage.setItem("a",1);
+        storage.setItem("user",{a:1});
+        storage.setItem("abc",{a:1},"user");
+     * */
+
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
