@@ -37,7 +37,7 @@ export default new Router({
                    component: Detail,
                }
            ],
-           redirect:'/index'
+           // redirect:'/index'
        },
        // 为了不出现/order/cart这样比较难看的路由,单独提取出来
        {

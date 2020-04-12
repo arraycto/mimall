@@ -9,7 +9,8 @@ import App from './App.vue'
  * axios.defaults.baseURL = 'http://mall.springboot.cn/api';
     axios.defaults.timeout = 8000;
  */
-
+axios.defaults.baseURL = '/api';
+axios.defaults.timeout = 8000;
 //错误拦截
 axios.interceptors.response.use(function (response) {
     let res = response.data;
@@ -29,4 +30,4 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   render: h => h(App),
-}).$mount('#app')
+}).$mount('#app');
